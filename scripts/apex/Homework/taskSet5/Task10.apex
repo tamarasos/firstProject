@@ -1,0 +1,70 @@
+//  Write a program that create a list of strings with 10 values and get the count of the 
+//  items that are not equal to "Admin" or "Developer" using a for loop and 
+//  the continue keyword.
+
+//  List<String> newList= new List<String> {'admin','developer','bs', 'architect','marketing','business', 'admin', 'developer','bs'};
+
+//  Integer count=0;
+//  for(Integer i=0; i<newList.size();i++){
+// String each=newList.get(i);
+//     if(each=='admin' || each)=='developer'){
+//   continue;
+//     }else
+//   count++;
+//  }
+
+// System.debug(count);
+
+
+ List<String> roleList = new List<String>();
+ roleList.add('Java SDET'); 
+ roleList.add('Java Developer'); 
+ roleList.add('Cybersecurity Analyst'); 
+ roleList.add('Developer'); 
+ roleList.add('Data Science'); 
+ roleList.add('Salesforce Developer'); 
+ roleList.add('Admin'); 
+ roleList.add('Salesforce Architect'); 
+ roleList.add('Sales Manager'); 
+ roleList.add('Marketing Director'); 
+
+ Integer count = 0 ;
+
+//  for(Integer i=0; i<roleList.size() ; i++) {
+//     //System.debug('Value at index #'+ i +' is :' + roleList.get(i) );
+//     String each = roleList.get(i) ; 
+//     if(each=='Admin' || each == 'Developer'){
+//         continue ; // skip the rest of the code and go to next iteration
+//     }
+//     count++; 
+//  }
+ 
+ for(Integer i=0; i<roleList.size() ; i++) {
+    //System.debug('Value at index #'+ i +' is :' + roleList.get(i) );
+    String each = roleList.get(i) ;  //Admin
+
+    if(each!='Admin' && each !='Developer'){
+      count++; 
+    }
+    
+ }
+// this is the same
+
+
+ for (Integer i = 0; i < roleList.size(); i++) {
+  //System.debug('Value at index #'+ i +' is :' + roleList.get(i) );
+  String each = roleList.get(i); //Admin
+
+  if (!(each == 'Admin' || each == 'Developer')) {
+    count++;
+  }
+}
+
+System.debug('count value is : ' + count);
+
+
+ System.debug('count value is : ' + count); 
+
+
+
+  

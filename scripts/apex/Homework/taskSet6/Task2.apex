@@ -1,0 +1,36 @@
+//  Write an Apex code to create a List of Strings with 4 items
+//  set the value of last item to the value of first item 
+//   for example original list values :  item1 , item2, item3, item4 
+//                    list values now :  item1 , item2, item3, item1
+
+
+
+List<String> newList= new  List<string>{'thing1','thing2','thing3','thing4'};
+
+// i did this not good, not dinamic
+// newList.set(0, 'thing4');
+// newList.set(3,'thing1');
+// System.debug(newList);
+
+String firstItem=newList.get(0);
+newList.set(3, firstItem);
+
+/**
+2. Write an Apex code to create an List of Strings with 4 items
+ set the value of last item to the value of first item 
+  for example original list values :  item1 , item2, item3, item4 
+                   list values now :  item1 , item2, item3, item1 */
+
+//shortcut varListWithStrValues 
+List<String> strList = new List<String>{'item1','item2','item3','item4','item5'};
+System.debug('strList value is : ' + strList); 
+String firstItem = strList.get(0) ; // array syntax  strList[0]
+
+// strList.set(3, firstItem );  
+//same you choose whic one you wna use
+strList[3]= firstItem;
+
+// what if you want to get last item index dynamically without putting number 3
+// so we can make it work for list with any size 
+strList.set(  strList.size()-1  , firstItem) ; 
+System.debug('strList value is : ' + strList); 

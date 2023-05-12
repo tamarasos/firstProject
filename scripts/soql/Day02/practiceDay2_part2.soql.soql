@@ -1,0 +1,55 @@
+//Child to Parent Query 
+// Get all Contact Name and Account Name that contact belong to 
+// Filter the contact to only show contact with Account 
+
+//SELECT Name , AccountId, Account.Name
+//FROM Contact
+//WHERE AccountId != null 
+
+
+
+//SELECT Name, AccountId, Account.Name
+
+ //FROM Contact
+
+
+
+//SELECT Name , AccountId, Account.Name
+//FROM Contact
+//WHERE AccountId != null 
+
+//SELECT Subject,  Account.Name
+ //FROM Case
+//WHERE AccountId=null
+
+
+// Get all the casre records Subject and Account Name
+//  that belong to Account with Name 
+// starts with United 
+//SELECT Subject, Account.Name 
+//FROM Case
+//WHERE Account.Name LIKE 'United%'
+
+//SELECT Subject, Account.Name , Contact.Name, CreatedBy.Name
+//FROM Case
+//WHERE Account.Name LIKE 'United%'
+
+
+// Get all opportunity Name, Owner Name, Account Name  
+// From Opportunity 
+//SELECT Name, Owner.Name, Account.Name
+ //FROM Opportunity
+
+//SELECT Name, Price__c, Contact__r.Name
+ //FROM Book__c
+ //ORDER BY Contact__r.Name ASC NULLS LAST
+
+ //SELECT Model__r.
+ // FROM Vehicle__c
+
+   //SELECT Name, Price__c, Contact__r.Name
+  //FROM Book__c
+//WHERE Contact__r.Name ='Snow'
+//ORDER BY Contact__r.Name DESC NULLS LAST
+
+

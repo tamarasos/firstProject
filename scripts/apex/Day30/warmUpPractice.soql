@@ -1,0 +1,34 @@
+
+// 1. Get the Name, StageName of Opportunity isClosed (closed won | lost)
+// 2. Get the count of Opportunity for each isClosed (closed won | lost) value
+// 3. Get the count, Sum of all Amount for Opportunity isWon (closed won)
+// 4. Get the the Case Number, Status of Case NOT  isClosed 
+// 5. Get the count of Case isClosed (Closed status)
+
+
+// SELECT Name, StageName
+//   FROM Opportunity
+//  WHERE IsClosed = true
+
+// SELECT isClosed, COUNT(Id)
+// FROM Opportunity
+// GROUP BY IsClosed
+
+// SELECT isWon, COUNT(Id) , SUM(Amount)
+// FROM Opportunity
+// GROUP BY IsWon
+
+select CaseNumber,  Status
+from  Case 
+where IsClosed = false
+
+select count(id)
+from case
+where isClosed = true
+
+
+Alias for aggregate columns
+
+SELECT COUNT(ID) MyOppsCount, SUM(Amount) TotalAmount,  
+      MAX(Amount) HighestAmount,  MIN(Amount) LowestAmount, AVG(Amount) AverageAmount
+FROM Opportunity
