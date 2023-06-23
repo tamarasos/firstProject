@@ -1,3 +1,4 @@
+
 trigger PracticeWithZaynepy on Account (before update, before delete, before insert) {
 
 

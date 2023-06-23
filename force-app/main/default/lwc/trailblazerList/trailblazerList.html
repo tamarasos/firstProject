@@ -1,0 +1,36 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Trailblazer List" icon-name="standard:account">
+      <div>
+        <lightning-input
+          type="search"
+          label="Search Trailblazer"
+          placeholder="type first name"
+          onchange={handleSearchKeyChange}
+        ></lightning-input>
+  
+        <template lwc:if={searcKey}>
+  
+          <p>You are searching for {searchKey}</p>
+  
+        </template>
+  
+        <br>
+  
+        <div>
+  
+          <lightning-datatable
+              key-field="id"
+              data={filteredTrailblazer}
+              columns={columns}>
+          </lightning-datatable>
+  
+  
+        </div>
+  
+  
+  
+  
+      </div>
+    </lightning-card>
+  </template>

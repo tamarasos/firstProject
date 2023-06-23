@@ -1,8 +1,8 @@
-global class CallOutUtils {
+global class CallOutUtils{
     
 
-    @future
-    global static void createSpartan(String name, String gender, Long phone){
+    @future(callout=true)
+    global static void createSpartan(String name, String gender, Decimal  phone){
 
         String url = 'https://pi2hscwpkz.us-east-1.awsapprunner.com/api/spartans'; 
 
@@ -27,5 +27,19 @@ global class CallOutUtils {
 
     }
 
-
 }
+
+//     global static void deleteSpartan(Integer Id){
+//         Http http= new Http();
+// HttpRequest request= new HttpRequest();
+// request.setMethod('DELETE');
+// request.setEndpoint('https://pi2hscwpkz.us-east-1.awsapprunner.com/api/spartans/'+ Id);
+// // request.setHeader('Content-Type', 'application/json');
+// // request.setBody('"name":"Me","gender":"Female","phone":4579688654}');
+
+// HttpResponse response= http.send(request);
+// System.debug(response.getStatusCode());
+// System.debug(response.getBody()); 
+
+
+//     }

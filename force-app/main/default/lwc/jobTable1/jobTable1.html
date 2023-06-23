@@ -1,0 +1,19 @@
+<template>
+    
+
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+      <lightning-datatable
+        key-field="jobId"
+        data={filteredJobs}
+       columns={columns}>
+      </lightning-datatable>
+
+
+
+      <lightning-input type="search"
+       variant="standard" 
+      label="Search" 
+      value={searchKey}
+      onchange={handleChange}></lightning-input>
+    </lightning-card>
+</template>

@@ -68,15 +68,6 @@ update accToUpdate;
 }
 
 
-  //when a contact is deleted , update Number of Contacts field on Account
-
-
-    
-
-Set<Id> accId= new Set<Id> ();
-for(Contact each:Trigger.old){
-
-}
 
 
   

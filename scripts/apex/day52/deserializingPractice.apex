@@ -8,3 +8,5 @@ System.debug('myJsonStr value is : ' + myJsonStr);
 
 Map<String,Object> myMap = (Map<String,Object>) JSON.deserializeUntyped(myJsonStr) ; 
 System.debug('myMap value is : ' + myMap);
+
+//myMap value is : {gender=Male, id=1, name=Meade, phone=3584128232}

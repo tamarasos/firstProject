@@ -30,8 +30,9 @@ System.debug('Content-Type header value ' +  res.getHeader('content-type')      
 // cast the type object to (Map<String,Object>) 
 Map<String,Object> resultMap = (Map<String,Object>) JSON.deserializeUntyped(  res.getBody()  ) ; 
 
-System.debug('resultMap value is : ' + resultMap);
-System.debug('resultMap.get(\'name\') value is : ' + resultMap.get('name'));
-System.debug('resultMap.get(\'gender\') value is : ' + resultMap.get('gender'));
-System.debug('resultMap.get(\'id\') value is : ' + resultMap.get('id'));
-System.debug('resultMap.get(\'phone\') value is : ' + resultMap.get('phone'));
+ System.debug('resultMap value is : ' + resultMap);
+ System.debug('resultMap.get(\'name\') value is : ' + resultMap.get('name'));
+ System.debug('resultMap.get(\'gender\') value is : ' + resultMap.get('gender'));
+ System.debug('resultMap.get(\'id\') value is : ' + resultMap.get('id'));
+ System.debug('resultMap.get(\'phone\') value is : ' + resultMap.get('phone'));
+
