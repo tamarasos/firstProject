@@ -1,0 +1,28 @@
+<template>
+
+
+    <lightning-card  variant="Narrow"  title="Homework 3" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">  
+    <template lwc:if={wiredAccount.data}>
+        <template for:each={wiredAccount.data} for:item="bla">
+
+            <p key={bla.Id}> 
+                <!-- acc name is {bla.Name} -->
+                <lightning-datatable
+                key-field="id"
+                data={wiredAccount.data}
+                columns={columns}>
+             </lightning-datatable>
+              
+            </p>
+    
+    </template>
+</template>
+
+    <template lwc:elseif={wiredAccount.error}>
+        <p>ERROR OCCURRED  </p>
+    </template>
+</div>
+    </lightning-card>
+    
+</template>
