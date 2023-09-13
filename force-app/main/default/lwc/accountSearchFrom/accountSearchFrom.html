@@ -1,0 +1,27 @@
+<template>
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+ 
+    <lightning-layout multiple-rows>
+        <lightning-layout-item >
+           
+            <lightning-input type="text"
+            variant="standard" 
+             label="Enter account name" 
+             onchange={accountNameChangeHand}></lightning-input> 
+        </lightning-layout-item>
+    
+        <lightning-layout-item class="slds-m-left_small slds-m-top_large">
+            <lightning-button variant="base"
+            label="Search" 
+            title="titleName"
+         onclick={searchClickHandler}
+             class=" slds-m-top_large"></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+   
+  
+    
+</lightning-card>
+  
+    
+</template>

@@ -52,3 +52,6 @@ public class HttpCalloutApex {
         system.debug('response body -->'+response.getStatusCode()); //SHOWS RESPONSE STATUS
     }
 }
+
+
+

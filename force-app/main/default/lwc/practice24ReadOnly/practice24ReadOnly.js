@@ -8,7 +8,7 @@ import AMOUNT_FIELD from "@salesforce/schema/Opportunity.Amount";
 export default class Practice24_readonly extends LightningElement {
 
     objectApiName = OPP_OBJECT; 
-    recordId = '006Dm000004D5XJIA0'; // use your own record Id
+    recordId = '006Dn000006nWtPIAU'; // use your own record Id
 
     fields = [NAME_FIELD, STAGE_FIELD, CLOSE_DATE_FIELD, AMOUNT_FIELD];
 

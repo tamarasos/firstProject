@@ -76,7 +76,8 @@ public class OverdueOppProcessor implements Database.Batchable<sObject> , Databa
             FROM AsyncApexJob
             WHERE Id = 
          */
-        
+        Id user=UserInfo.getUserRoleId();
+        system.debug(user);
 
     }
 

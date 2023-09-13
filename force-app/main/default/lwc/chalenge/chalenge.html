@@ -1,0 +1,30 @@
+<template>
+<lightning-card  variant="Narrow"  title="Financial Services Account Listing" icon-name="standard:account">
+    <div class="slds-var-m-around_medium">  
+        <lightning-input
+        type="search"
+        variant="standard"  
+        label="Account Name Search"
+       
+        onchange={handleSearchKeyChange}></lightning-input>
+
+<template lwc:if={filteredAccounts} >
+    <template for:each={filteredAccounts} for:item="each">
+    
+    <p key={each.Id}>
+       <!-- // Account name is {each.Name} | Account id is {each.id}  | Account Industry is {each.Industry} -->
+       <lightning-datatable
+       key-field="Id"
+       data={filteredAccounts}
+       columns={columns}>
+    </lightning-datatable>
+    </p>
+    </template>
+    </template>
+    <template lwc:elseif={error}>
+        <p>ERROR OCCURRED  </p>
+    </template>
+</div>
+</lightning-card>
+    
+</template>

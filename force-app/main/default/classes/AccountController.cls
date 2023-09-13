@@ -2,16 +2,23 @@
 // without sharing will not enforce record level sharing rules
 
 public with sharing class AccountController {
+   @AuraEnabled(cacheable=true)
+   public static List <Account> getIndustry (){
+      return [Select Id, Name, Phone, AnnualRevenue, Website, Owner.Name
+      from Account 
+      where Industry='/Financial /' ];
+   }
 
    /**
      * Create a static method called getAllAccounts
      * @return all the accounts in your salesforce org
      */
+    @AuraEnabled(cacheable=true)
     public static List<Account> getAllAccounts(){
 
        return [SELECT Name, AnnualRevenue 
                FROM Account
-               WITH SECURITY_ENFORCED //ENFORM FLS , FILED LEVEL SECURITY
+               ORDER BY CreatedDate Desc
                ];
 
     }
