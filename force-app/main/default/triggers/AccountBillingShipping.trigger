@@ -19,7 +19,6 @@ for(Account each:Trigger.new){
 }
 
 //public class AccountTriggerHandler
-//vfvgvkhgb
 
 
 // AccountTriggerHandler.handleBeforeInsert(Trigger.new);
